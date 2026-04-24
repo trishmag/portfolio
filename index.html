@@ -191,9 +191,54 @@
   </section>
 
   <!-- Projects -->
+  <!-- Class Projects (new) -->
+  <section id="class-projects">
+    <div class="container">
+  <h2 class="section-title">Class Projects</h2>
+  <p class="section-sub">Selected projects completed as part of coursework and team assignments. Each repo includes setup instructions, source code, and notes about the implementation and learning outcomes.</p>
+  <div class="projects-grid">
+
+        <article class="project-card repo-card">
+          <div class="repo-badge">Class</div>
+          <div class="project-icon">&#x1F4C1;</div>
+          <h3>Final Project — GitHub Repo</h3>
+          <p>This capstone implements a searchable database analyzing the salaries of DC public employees. The repo includes data ingestion scripts, database schema, and queries used for analysis, along with documentation on methodology and findings.</p>
+          <div class="project-tags">
+            <span>Course</span><span>Final</span><span>GitHub</span>
+          </div>
+          <a href="https://github.com/trishmag/final-project.git" class="btn btn-repo" target="_blank" rel="noopener noreferrer" aria-label="Open Final Project repository on GitHub">
+            <svg class="icon icon-github" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M12 .297a12 12 0 00-3.797 23.418c.6.111.82-.261.82-.58 0-.287-.01-1.047-.015-2.055-3.338.725-4.042-1.608-4.042-1.608-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.109-.774.418-1.305.762-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.123-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.5 11.5 0 016.003 0c2.292-1.552 3.298-1.23 3.298-1.23.655 1.653.242 2.874.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.804 5.624-5.476 5.92.43.372.815 1.102.815 2.222 0 1.605-.015 2.898-.015 3.293 0 .322.216.697.825.579A12 12 0 0012 .297"/>
+            </svg>
+            View Repository
+          </a>
+        </article>
+
+        <article class="project-card repo-card">
+          <div class="repo-badge">Class</div>
+          <div class="project-icon">&#x1F4C1;</div>
+          <h3>Group Project 2 — GitHub Repo</h3>
+          <p>A collaborative project focused on NBA player shooting statistics. The repository contains data collection and cleaning code, and statistical analysis and visualizations of shot distributions used to compare players' shooting efficiency by zone and season.</p>
+          <div class="project-tags">
+            <span>Group</span><span>Web App</span><span>GitHub</span>
+          </div>
+          <a href="https://github.com/trishmag/groupproject2.git" class="btn btn-repo" target="_blank" rel="noopener noreferrer" aria-label="Open Group Project 2 repository on GitHub">
+            <svg class="icon icon-github" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M12 .297a12 12 0 00-3.797 23.418c.6.111.82-.261.82-.58 0-.287-.01-1.047-.015-2.055-3.338.725-4.042-1.608-4.042-1.608-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.109-.774.418-1.305.762-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.123-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.5 11.5 0 016.003 0c2.292-1.552 3.298-1.23 3.298-1.23.655 1.653.242 2.874.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.804 5.624-5.476 5.92.43.372.815 1.102.815 2.222 0 1.605-.015 2.898-.015 3.293 0 .322.216.697.825.579A12 12 0 0012 .297"/>
+            </svg>
+            View Repository
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal Projects (renamed) -->
   <section id="projects">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title">Personal Projects</h2>
+      <p class="section-sub">Personal and independent projects showcasing applied skills, prototypes, and experiments. Each project highlights the technical approach, tools used, and links to source code or live demos.</p>
       <div class="projects-grid">
 
         <article class="project-card featured">
@@ -233,6 +278,8 @@
           </div>
         </article>
 
+        
+
       </div>
     </div>
   </section>
@@ -243,12 +290,11 @@
       <h2 class="section-title">Resume</h2>
       <div class="resume-wrapper">
         <div class="resume-preview">
-          <iframe src="resume.pdf" title="Trishma Garcon Resume" id="resumeFrame" style="width:100%; height:700px; border:none; border-radius:8px;"></iframe>
+          <iframe src="resume.pdf" title="Trishma Garcon Resume" id="resumeFrame" class="resume-frame"></iframe>
           <div class="resume-fallback" id="resumeFallback">
             <div class="resume-icon">&#x1F4C4;</div>
-            <p>Resume PDF not found yet. Drop <code>resume.pdf</code> into the portfolio folder.</p>
-            <label for="resumeUpload" class="btn btn-primary" style="cursor:pointer;">Preview Upload</label>
-            <input type="file" id="resumeUpload" accept=".pdf" style="display:none;" />
+            <label for="resumeUpload" class="btn btn-primary resume-upload-label">Preview Upload</label>
+            <input type="file" id="resumeUpload" accept=".pdf" class="resume-upload-input" />
           </div>
         </div>
         <div class="resume-actions">

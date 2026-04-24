@@ -153,6 +153,28 @@ section { padding: 100px 0; }
   border-radius: 2px;
 }
 
+.section-sub {
+  color: var(--text2);
+  max-width: 900px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Temporary debug highlight to verify description is visible */
+.highlight-debug {
+  background: linear-gradient(90deg, rgba(124,92,252,0.14), rgba(56,189,248,0.06));
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid rgba(124,92,252,0.12);
+}
+
+/* Temporary: highlight all class project cards to confirm display */
+#class-projects .project-card {
+  background: linear-gradient(180deg, rgba(124,92,252,0.03), rgba(56,189,248,0.02));
+  border: 1px solid rgba(124,92,252,0.12);
+  box-shadow: 0 6px 18px rgba(124,92,252,0.06);
+}
+
 /* === Hero === */
 #hero {
   position: relative;
@@ -181,8 +203,9 @@ section { padding: 100px 0; }
 }
 
 .hero-photo {
-  width: 110px;
-  height: 110px;
+  /* responsive size: min 120px, scales with viewport, max 180px */
+  width: clamp(120px, 14vw, 180px);
+  height: clamp(120px, 14vw, 180px);
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
@@ -602,6 +625,51 @@ section { padding: 100px 0; }
   letter-spacing: 0.02em;
 }
 
+/* === Repo Card (GitHub link) === */
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.repo-badge {
+  background: linear-gradient(90deg, var(--accent3), var(--accent));
+  color: #fff;
+  padding: 0.35rem 0.65rem;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+
+.btn-repo {
+  margin-top: 0.6rem;
+  background: linear-gradient(90deg, #24292e, #42474e);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.btn-repo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+.btn-repo .icon-github {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff; /* icon uses currentColor from the path */
+}
+
 .add-project {
   border-style: dashed;
   display: flex;
@@ -663,6 +731,17 @@ section { padding: 100px 0; }
   text-align: center;
   padding: 2rem;
 }
+
+/* Resume frame and upload helpers (moved from inline styles) */
+.resume-frame {
+  width: 100%;
+  height: 700px;
+  border: none;
+  border-radius: 8px;
+}
+
+.resume-upload-label { cursor: pointer; }
+.resume-upload-input { display: none; }
 
 .resume-highlights {
   background: var(--surface);
@@ -838,4 +917,5 @@ footer {
 @media (max-width: 480px) {
   .about-stats { grid-template-columns: 1fr; }
   .hero-cta { flex-direction: column; align-items: center; }
+  .hero-photo { width: clamp(90px, 20vw, 120px); height: clamp(90px, 20vw, 120px); }
 }
